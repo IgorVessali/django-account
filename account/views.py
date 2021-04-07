@@ -1,6 +1,6 @@
-from rest_framework.generics import ListCreateAPIView, CreateAPIView
+from rest_framework.generics import ListCreateAPIView, CreateAPIView, ListAPIView
 from .models import Account, History
-from .serializers import AccountSerializer, HistorySerializer
+from .serializers import AccountSerializer, HistorySerializer, ExtractSerializer
 
 
 class AccountAPIView(ListCreateAPIView):
@@ -12,6 +12,10 @@ class AccountAPIView(ListCreateAPIView):
 class HistoryAPIView(CreateAPIView):
 
     queryset = History.objects.all()
-    serializer_class = HistorySerializer
+    serializer_class = HistorySerializer    
 
-    
+
+class ExtractAPIView(ListAPIView):
+
+    queryset = Account.objects.all()
+    serializer_class = ExtractSerializer
