@@ -4,9 +4,11 @@ from django.utils.translation import ugettext_lazy as _
 
 class Account(models.Model):
    
-    number = models.PositiveIntegerField(_("Número"), unique=True, blank=False, null=False, editable=True)
+    number = models.PositiveIntegerField(_("Número"), 
+                unique=True, blank=False, null=False, editable=True)
     initial_value = models.DecimalField(_("Saldo Inicial"), 
-                default=0, max_digits=10, decimal_places=2, blank=False, null=False, editable=True)
+                default=0, max_digits=10, decimal_places=2, 
+                blank=False, null=False, editable=True)
     created = models.DateField(_("Criado em"), auto_now_add=True)
 
     class Meta:
