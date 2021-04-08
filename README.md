@@ -25,7 +25,7 @@ Follow the steps below to run the project locally.
 Clone the project ...
 
 ```bash
-git clone https://github.com/IgorVessali/challenge-weather.git
+git clone https://github.com/IgorVessali/django-account.git
 cd challenge-weather
 ```
 
