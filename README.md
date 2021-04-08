@@ -1,8 +1,6 @@
 # Challenge Account
 
-Project that performs a consultation of the forecast of the time of the informed city, saves the research and makes the history of consultations available.
-
-It also provides a documented API for a new query and query history.
+Project that realizes that simulates a virtual account generating the statement of credits and debits.
 
 
 # Stack
@@ -85,3 +83,4 @@ To create the html with the results run the command:
 ```bash
 docker-compose exec web coverage html   
 ```
+View the report generated inside the /htmlcov folder by opening the file index.html
