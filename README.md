@@ -1,4 +1,4 @@
-# Challenge Account
+# Django Account
 
 Project that realizes that simulates a virtual account generating the statement of credits and debits.
 
