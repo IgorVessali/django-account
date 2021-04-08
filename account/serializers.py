@@ -49,6 +49,6 @@ class ExtractSerializer(ModelSerializer):
         current_value = obj.histories.aggregate(Sum('value')).get('value__sum')
 
         if current_value is None:
-            return 0
-
+            current_value = 0
+        
         return current_value + obj.initial_value
