@@ -70,7 +70,7 @@ docker-compose exec web python manage.py createsuperuser
 
 The project has unit tests with 100% coverage ...
 
-![coverage image](https://github.com/IgorVessali/challenge-weather/blob/main/img/coverage.png)
+![coverage image](https://github.com/IgorVessali/django-account/blob/main/img/coverage.png)
 
 
 
