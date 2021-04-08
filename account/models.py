@@ -27,6 +27,7 @@ class History(models.Model):
     )
 
     account = models.ForeignKey(Account, on_delete=models.CASCADE, related_name='histories')
+    date = models.DateTimeField(_("Date"), auto_now_add=True)
     short_description = models.CharField(_("Descrição"), max_length=100, blank=False)
     operation = models.CharField(_("Operação"), max_length=1, choices= OPERATION_CHOICES)
     value = models.DecimalField(_("Valor"), max_digits=10, decimal_places=2)    

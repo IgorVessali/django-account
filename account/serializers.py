@@ -3,6 +3,7 @@ from .models import Account, History
 from django.db.models import Sum
 
 
+
 class AccountSerializer(ModelSerializer):
 
     class Meta:
@@ -31,7 +32,7 @@ class ExtractHistorySerializer(ModelSerializer):
 
     class Meta:
         model = History
-        fields =  ('short_description','operation', 'value') 
+        fields =  ('short_description','operation', 'value', 'date') 
 
 
 class ExtractSerializer(ModelSerializer):
@@ -42,6 +43,7 @@ class ExtractSerializer(ModelSerializer):
     class Meta:
         model = Account
         fields = ('number', 'initial_value', 'current_value', 'histories')
+        
 
     def get_current_value(self, obj):
         current_value = obj.histories.aggregate(Sum('value')).get('value__sum')
