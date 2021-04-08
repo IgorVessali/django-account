@@ -26,7 +26,7 @@ Clone the project ...
 
 ```bash
 git clone https://github.com/IgorVessali/django-account.git
-cd challenge-weather
+cd django-account
 ```
 
 Configure local ambient ...
